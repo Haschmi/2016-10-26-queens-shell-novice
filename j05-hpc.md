@@ -17,7 +17,7 @@ At this point, we have learned all of the basics of using the shell. These skill
 
 Our system has a special "login" node that users can pretty much do whatever on, and a whole bunch of "production" nodes meant to do the actual work. Each node is essentially a different Linux computer, each with its own set of processors and memory. Although it's entirely possible to write a shell script to do stuff and then run it on the login node (which we've been doing so far), you won't have access to the same resources as you would on the production nodes (and it's not considered very polite to other users!). The login nodes are primarily for submitting jobs, retrieving data, short tests, and compiling software.
 
-We will need to make several modifications to the shell scripts we have been writing in order to get them to run on the production nodes. Specifically, we will need to format our scripts for use by Sun Grid Engine, which is the job scheduler used by HPCVL. Although the job schedulers differ between computing organizations, the general concepts remain the same. What we are going to do is add some special commands to tell Sun Grid Engine exactly what to do with our script and what kind of resources we will need. This allows the cluster to move your job to nodes where resources are available and have your scripts play nice with others'.
+We will need to make several modifications to the shell scripts we have been writing in order to get them to run on the production nodes. Specifically, we will need to format our scripts for use by Sun Grid Engine, which is the job scheduler used on the CAC clusters. Although the job schedulers differ between computing organizations, the general concepts remain the same. What we are going to do is add some special commands to tell Sun Grid Engine exactly what to do with our script and what kind of resources we will need. This allows the cluster to move your job to nodes where resources are available and have your scripts play nice with others'.
 
 ## Sun Grid Engine (SGE) basics
 
@@ -94,14 +94,14 @@ We often want to use software that's not on our `$PATH`. There are several ways 
 
 ## Connecting to external computers with `ssh`
 
-We actually already did this at the beginning of the lesson to connect to the HPCVL network. I will give a better overview of what we did earlier. `ssh` connects you to an external computer and let you use it as if it were your own.
+We actually already did this at the beginning of the lesson to connect to the CAC network. I will give a better overview of what we did earlier. `ssh` connects you to an external computer and let you use it as if it were your own.
 
 This is how you connect to another computer with `ssh`:
 ```{.bash}
 ssh yourUserName@someInternetAddressOrIP
 ```
 
-To connect to HPCVL, the command changes to:
+To connect to the Centre for Advanced Computing, the command changes to:
 ```{.bash}
 ssh hpcxxxx@sfnode0.hpcvl.queensu.ca
 
@@ -111,11 +111,11 @@ ssh hpcxxxx@130.15.59.64
 
 After ssh-ing to `sfnode0` and entering your password, you will be connected to the M9000 system (Solaris). You will usually want to use the SW system instead (Linux). To use the Linux cluster, `ssh` to the linux login node with `ssh swlogin1`. Note that all files are shared between both systems.
 
-One helpful tip is to always use `ssh -X` instead of simply `ssh`. The `-X` option enables X-forwarding. In plain English, this means that any pop-up windows you create on HPCVL are passed to your computer screen as well.
+One helpful tip is to always use `ssh -X` instead of simply `ssh`. The `-X` option enables X-forwarding. In plain English, this means that any pop-up windows you create on the remote machine are passed to your computer screen as well.
 
 To close an `ssh` connection, simply type `exit`.
 
-## Transferring files to and from HPCVL using `sftp`
+## Transferring files to and from CAC using `sftp`
 
 So, say at the end of the day we've done some work on the cluster. Now we want to take our files off of the cluster. We are going to do this using `sftp` (Secure File Transfer Protocol). `sftp` is a lot like `ssh` (what we are currently connected to the cluster with), only with a smaller list of commands we can use for transferring files.
 
@@ -176,4 +176,4 @@ Important `sftp` commands (used the same way as before!):
 + `bye` / `exit`: Either of these commands will quit your `sftp` session.
 
 > ## Uploading / downloading files {.challenge}
-> Upload a file (can be any file whatsoever) to your home directory on HPCVL. Now download the `demo.sh` shell script we wrote earlier to your computer.
+> Upload a file (can be any file whatsoever) to your home directory at the Centre for Advanced Computing. Now download the `demo.sh` shell script we wrote earlier to your computer.

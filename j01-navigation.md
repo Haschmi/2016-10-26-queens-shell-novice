@@ -113,8 +113,8 @@ cd ~
 
 Our "home" directory is the one where we generally want to keep all of our files. Other folders on a UNIX OS contain system files, and get modified and changed as you install new software or upgrade your OS.
 
-> ## Using the HPCVL filesystem {.callout}
-> On HPCVL systems, you have a number of places where you can store your files. These differ in both the amount of space allocated and whether or not they are backed up.
+> ## Using the Centre for Advanced Computing filesystem {.callout}
+> On Centre for Advanced Computing systems, you have a number of places where you can store your files. These differ in both the amount of space allocated and whether or not they are backed up.
 >
 > File storage locations:  
 > **/home** (your home directory) - 500 GB, backed up  
