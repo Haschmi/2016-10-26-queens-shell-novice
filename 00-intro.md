@@ -39,7 +39,7 @@ A shell is a program like any other.
 What's special about it is that its job is to run other programs
 rather than to do calculations itself.
 The most popular Unix shell is Bash,
-the Bourne Again SHell
+the Bourne Again Shell
 (so-called because it's derived from a shell written by Stephen Bourne --- this
 is what passes for wit among programmers).
 Bash is the default shell on most modern implementations of Unix
