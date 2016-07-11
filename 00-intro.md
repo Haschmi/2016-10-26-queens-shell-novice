@@ -17,10 +17,8 @@ At a high level, computers do four things:
 -   interact with us
 
 Until very recently, the only way to interact with a computer was by typing input and receiving printed text output. This kind of interface is called a
-**command-line interface**, or CLI,
-to distinguish it from a
-**graphical user interface**, or GUI,
-which most people now use.
+**command-line interface**, or CLI, to distinguish it from a
+**graphical user interface**, or GUI, which most people now use.
 The heart of a CLI is a **read-evaluate-print loop**, or REPL:
 when the user types a command and then presses the enter (or return) key,
 the computer reads it,
