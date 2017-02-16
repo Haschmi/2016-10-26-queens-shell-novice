@@ -12,7 +12,7 @@ At the end of this lesson, you should know all of the basics of using a computer
 
 > ## Getting ready {.getready}
 >
-> All of the software for today's lessons are preinstalled on the CAC systems. To connect to these systems, open up an SSH client (MobaXterm on Windows, Terminal on Linux/OSX). At the prompt, type the following then press `Enter`: `ssh -X yourUserName@sfnode0.hpcvl.queensu.ca`. You will be prompted for your password. Once you successfully enter your password, you will be on our system and ready to go!
+> You can download the example data used in the segment from [here](https://github.com/Haschmi/2016-10-26-queens-shell-novice/raw/gh-pages/bash-tutorial.tar.gz)
 
 ## Topics
 
